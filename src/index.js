@@ -1,17 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import './Accordion.css';
+import Accordion from "./Accordion"
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+// const list = ["Default", "Featured", "Latest", "Following", "BookMarked"];
+//I can not pass the list
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <div className='accordionContainer'>
+    <Accordion isFirst={true} title="Sort Home Feed By Featured Posts" key="1"
+    // lists = {list} // 
+    />
+    <Accordion isFirst={false} title="More Things to Do" key="2"/>
+  </div>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
